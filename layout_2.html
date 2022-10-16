@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<style type="text/css">
+    #container{
+        position: relative;
+        width: 800px;
+        height: 600px;
+    }
+    .multi-click a{
+        position: absolute
+    }
+    .one{
+    width: 193px;
+    height: 227px;
+    top: 0;
+    left: 0;
+    display: inline-block;
+   }
+    .two{
+        width: 193px;
+    height: 227px;
+    top: 0;
+    left: 200px;
+    display: inline-block;
+
+    }
+
+    .three{
+        width: 380px;
+    height: 454px;
+    top: 0;
+    left: 385px;
+    display: inline-block;
+     }
+</style>
+<script src="js/flipbook.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        
+        $("#container").flipBook({
+            pages:[
+                {
+                    src:"images/book2/page1.jpg",
+                    thumb:"images/book2/thumb1.jpg", 
+                    title:"Cover"
+                },
+                {
+                    src:"images/book2/page2.jpg", 
+                    thumb:"images/book2/thumb2.jpg", 
+                    title:"Page two",
+                    htmlContent:`<div class='multi-click'>
+                        <a href='https://clicflyer.com/Retailers/GetFlyerPages?flyerid=93319' class='one' target="_blank"></a>
+                        <a href='https://www.wowdeals.me/ae/carrefour/catalogs/great-deals-on-electronics#Page16' class='two' target="_blank"></a>
+                        <a href='https://clicflyer.com/home' class='three' target="_blank"></a>
+                        </div>`
+                    
+                },
+                {
+                    src:"images/book2/page3.jpg", 
+                    thumb:"images/book2/thumb3.jpg", 
+                    title:"Page three"
+                   
+                },
+                {
+                    src:"images/book2/page4.jpg",
+                     thumb:"images/book2/thumb4.jpg",
+                      title:""
+                },
+
+                {
+                src:"images/book2/page5.jpg", 
+                thumb:"images/book2/thumb5.jpg",
+                 title:"Page five"
+                },
+
+                {
+                    src:"images/book2/page6.jpg", 
+                    thumb:"images/book2/thumb6.jpg", 
+                    title:"Page six"
+                },
+                {
+                    src:"images/book2/page7.jpg",
+                     thumb:"images/book2/thumb7.jpg", 
+                     title:"Page seven"
+                },
+                {
+                    src:"images/book2/page8.jpg",
+                     thumb:"images/book2/thumb8.jpg",
+                      title:"Last"
+                }
+            ],
+            viewMode:"2d",
+            layout:2
+        });
+        
+      
+
+    })
+</script>
+
+</head>
+
+<body>
+<h3>UI layout 2</h3>
+<div id="container"></div>
+</body>
+
+</html>
